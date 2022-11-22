@@ -10,7 +10,7 @@
  */
 
 function sayHello(name) {
-    return("Hello " + name);
+    return(`Hello ${name}!`);
 }
 
 /**
@@ -103,7 +103,8 @@ let bill = prompt("What is your bill total?");
 console.log(bill);
 let tip = prompt("What percentage tip would you like to leave (0.00 format)?")
 console.log(tip);
-alert("You should leave $" + (bill * tip) + " as a tip.")
+let suggestedTip = (bill * tip).toFixed(2);
+alert(`You should leave $ ${suggestedTip} as a tip.`);
 
 
 
@@ -128,4 +129,4 @@ function applyDiscount(op, dp){
     return(op - (op * dp));
 }
 
-console.log(applyDiscount(1250, .15));
+console.log(applyDiscount(1000, .15));
