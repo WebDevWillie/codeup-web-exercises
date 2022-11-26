@@ -103,12 +103,34 @@ alert(analyzeColor(colorPrompt));
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+// let 0 = 1
+// let 1 = .1
+// let 2 = .25
+// let 3 = .35
+// let 4 = .50
+// let 5 = 0
+
 
 function calculateTotal(ln, ta){
+    if (ln === 0) {
+        return(ta);
+    } else if (ln === 1) {
+        return (ta - (ta * .1));
+    } else if (ln === 2) {
+        return (ta - (ta * .25));
+    } else if (ln === 3) {
+        return (ta - (ta * .35));
+    } else if (ln === 4) {
+        return (ta - (ta * .50));
+    } else if (ln === 5) {
+        return (0);
+    } else {
+        return("You did not get a lucky number");
+    }
 
 }
 
-
+console.log(calculateTotal(3, 394));
 
 /**
  * TODO:
