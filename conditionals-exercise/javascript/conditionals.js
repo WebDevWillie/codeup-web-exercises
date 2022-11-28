@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 /* ########################################################################## */
 
@@ -143,7 +143,7 @@
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
-//
+
 // let totalBill = prompt("What is your total bill?");
 //
 // alert("Your lucky number was " + luckyNumber);
@@ -168,24 +168,85 @@
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+// numberInput();
+// function numberInput () {
+//    let didConfirm = confirm("Would you like to enter a number?");
+//
+//     if (didConfirm) {
+//         let userInput = prompt("Please enter a number.");
+//         console.log(userInput);
+//         userInput = parseFloat(userInput);
+//         console.log(typeof userInput);
+//         if ( !isNaN(userInput) ){
+//             console.log("user entered number");
+//             if (userInput % 2 === 0) {
+//                 alert("your number is even");
+//             } else {
+//                 alert("your number is odd");
+//             }
+//             alert("your number plus 100 is " + (userInput + 100));
+//
+//             if (Math.sign(userInput) === 1) {
+//                 alert("Your number is positive");
+//             } else  {
+//                 alert("Your number is negative");
+//             }
+//         }
+//         else {
+//             alert("You input the incorrect data type");
+//             console.log("user did not enter a number");
+//         }
+//     }
+//     else {
+//         console.log("user did not want to enter a number");
+//     }
+//
+//    }
+
+
+
+
+numberInput();
 function numberInput () {
-   confirm("Would you like to enter a number?")
-       let userInput = prompt("please enter a number.");
-       console.log(userInput);
-   if (userInput % 2 === 0) {
-        alert("your number is even");
-   } else if (userInput % 2 !==0) {
-        alert("your number is odd");
+    let didConfirm = confirm("Would you like to enter a number?");
 
-   }
-     alert("your number plus 100 is " + (parseFloat(userInput) + 100));
-
-   if (Math.sign(parseFloat(userInput)) === 1) {
-       alert("Your number is positive");
-   } else  {
-       alert("Your number is negative");
-   }
-
+    if (didConfirm) {
+        let userInput = prompt("Please enter a number.");
+        console.log(userInput);
+        userInput = parseFloat(userInput);
+        console.log(typeof userInput);
+        if (!isNaN(userInput)) {
+            isOddOrEven(userInput);
+            addHundred(userInput);
+            isPositiveNegative(userInput);
+        } else {
+            alert("you input the wrong data type");
+        }
+    } else {
+        console.log("user did not want to input a number");
+    }
 }
 
-console.log(numberInput());
+
+
+
+
+function isOddOrEven (input) {
+    if (input % 2 === 0) {
+        alert("your number is even");
+    } else {
+        alert("your number is odd");
+    }
+}
+
+function addHundred (input) {
+    alert("your number plus 100 is " + (parseInt(input) + 100));
+}
+
+function isPositiveNegative (input) {
+    if (Math.sign(input) === 1) {
+        alert("Your number is positive");
+    } else  {
+        alert("Your number is negative");
+    }
+}
