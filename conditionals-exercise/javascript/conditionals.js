@@ -21,33 +21,34 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-// let userInput = prompt("What is your favorite color");
-// function analyzeColor(color) {
-//     if (color === "blue") {
-//         alert("Blue is my favorite color.");
-//     } else if (color === "red") {
-//         alert("Red is too bright for me");
-//     } else {
-//         alert("I do not know anything about this color");
-//     }
-// }
-// console.log(analyzeColor(userInput))
-
+let userInput = prompt("What is your favorite color");
+userInput = userInput.toLowerCase();
+function analyzeColor(color) {
+    if (color === "blue") {
+        alert("Blue is my favorite color.");
+    } else if (color === "red") {
+        alert("Red is too bright for me");
+    } else {
+        alert("I do not know anything about this color");
+    }
+}
+let result = (analyzeColor(userInput));
+console.log(result);
 
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-// var randomColor = colors[Math.floor(Math.random() * colors.length)];
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-
-// console.log(analyzeColor(randomColor));
+// let result2 = analyzeColor(randomColor);
+// console.log(result2);
 
 
 /**
@@ -216,9 +217,17 @@ function numberInput () {
         userInput = parseFloat(userInput);
         console.log(typeof userInput);
         if (!isNaN(userInput)) {
-            isOddOrEven(userInput);
-            addHundred(userInput);
-            isPositiveNegative(userInput);
+            if (isOddOrEven(userInput)) {
+                alert("your number is even");
+            } else {
+                alert("your number is odd");
+            }
+              alert("your number plus 100 is " + addHundred(userInput));
+            if (isPositiveNegative(userInput)) {
+                alert("your number is positive");
+            } else {
+                alert("your number is negative");
+            }
         } else {
             alert("you input the wrong data type");
         }
@@ -232,21 +241,14 @@ function numberInput () {
 
 
 function isOddOrEven (input) {
-    if (input % 2 === 0) {
-        alert("your number is even");
-    } else {
-        alert("your number is odd");
-    }
+     return(input % 2 === 0);
 }
 
 function addHundred (input) {
-    alert("your number plus 100 is " + (parseInt(input) + 100));
+    return(parseInt(input) + 100);
 }
 
 function isPositiveNegative (input) {
-    if (Math.sign(input) === 1) {
-        alert("Your number is positive");
-    } else  {
-        alert("Your number is negative");
-    }
+    return (Math.sign(input) === 1);
+
 }
