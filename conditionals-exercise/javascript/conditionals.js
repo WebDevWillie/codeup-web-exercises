@@ -24,12 +24,16 @@
 let userInput = prompt("What is your favorite color");
 userInput = userInput.toLowerCase();
 function analyzeColor(color) {
-    if (color === "blue") {
-        alert("Blue is my favorite color.");
-    } else if (color === "red") {
-        alert("Red is too bright for me");
+    if (isNaN(color)) {
+        if (color === "blue") {
+            alert("Blue is my favorite color.");
+        } else if (color === "red") {
+            alert("Red is too bright for me");
+        } else {
+            alert("I do not know anything about this color");
+        }
     } else {
-        alert("I do not know anything about this color");
+        alert("Your input was not a string")
     }
 }
 let result = (analyzeColor(userInput));
@@ -252,3 +256,62 @@ function isPositiveNegative (input) {
     return (Math.sign(input) === 1);
 
 }
+
+
+function isNumeric (input) {
+    return !isNaN(parseFloat(input));
+}
+
+// ================ FUNCTION DRILLS
+
+
+// 1) Make a function called returnTwo() that returns the number 2 when called
+// ---Test this function with console.log(returnTwo())
+
+function returnTwo(){
+    return 2;
+}
+
+console.log(returnTwo());
+
+
+// 2) Make a function called returnName() that returns the string of your name
+// ---Test this function with console.log(returnName())
+
+function returnName(){
+    return 'will parry';
+}
+
+console.log(returnName());
+
+
+// 3) Make a function called addThree() which takes in a number input and returns the number plus 3.
+// ---Test this function with console.log(addThree(5))
+
+function addThree(input) {
+    return(parseFloat(input) + 3);
+}
+
+console.log(addThree(5));
+// 4) Make a function called sayString() which returns the string input passed in.
+// ---Test this function with console.log(sayString())
+
+function sayString(input) {
+    return input.toString();
+}
+console.log(sayString(5));
+
+// 5) Make a function called sayHowdy() which console.logs the string "Howdy!"
+// ---Test this function by directly calling sayHowdy()
+// ---Remember this function does not need a defined return value
+
+function sayHowdy(){
+    console.log("Howdy!");
+}
+sayHowdy();
+// ======== CONDITIONALS (switch / ternary / with functions)
+
+
+// write a function, abbrevToDay, that takes in a three-character abbreviation for the day of the week and returns the complete day of the week
+// Example: abbrevToDay('mon') returns 'Monday'
+
