@@ -283,10 +283,48 @@
 
     // !! Write a function, logNums, that takes in an array and logs each number in the array !!
     // !! Write a function, returnLongString, that takes in an array of strings and returns all strings concatenated together !!
-    // !! Write a function, returnArrSum, that takes in an array of values and returns the sum of all number elements !!
+    // !! Write a
+    //
+    // function, returnArrSum, that takes in an array of values and returns the sum of all number elements !!
+
+    // 1. Create an array the string elements 'April', 'May', 'June'
+    // 2. Add 'July' in the correct place of the array
+    // 3. Add 'March' in the correct place of the array
+    // 4. July is too hot; remove it from the array.
+    //     Console log the result and verify you get ['March', 'April', 'May', 'June']
+    // */
+
+
+    let months = ["april", "may", "june"];
+    months.push("july");
+    console.log(months);
+    months.unshift("march");
+    console.log(months);
+    months.pop();
+    console.log(months);
+
+
+    // 1. Put the first names of everyone in your row in the order they are sitting (just your half of the classroom)
+    // 2. Log the alphabetical order of everyone in your row
+    // 3. Log the reverse alphabetical order of everyone in your row
+    // 4. Log everyone in the row in reverse order
+    // 5. Log an array of just the first two students in the row (left to right)
+    // 6. Log everyone in the row in a single string separated by spaces
+    // 7. Log everyone in the row in a single string separated by underscores
+    // */
+
+    let names  = ["will", "chris", "chase", "titus"];
+    console.log(names);
+    console.log(names.slice().sort());
+    console.log(names.slice().reverse());
+    console.log(names.slice(0,2));
+    console.log(names.join(" "));
+    console.log(names.join("_"));
+
 
 
 </script>
+<script src="./javascript/planets.js"></script>
 
 </body>
 </html>
