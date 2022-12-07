@@ -147,8 +147,8 @@
      *      ...
      */
 
-    books.forEach(function (book){
-        console.log(`Book #${books.indexOf(0) + 1}
+    books.forEach(function (book, index){
+        console.log(`Book # ${index + 1}
          Title: ${book.title}
          Author: ${book.author.firstName} ${book.author.lastName}`)
     })
