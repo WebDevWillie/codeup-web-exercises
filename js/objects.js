@@ -58,7 +58,7 @@
     ];
 
     shoppers.forEach(function(shopper){
-        if(shopper.amount >= 200){
+        if(shopper.amount > 200){
             console.log(shopper.name + `, your amount before discount is ${shopper.amount}, your discount is ${shopper.amount * .12}, and your total after discount is ${shopper.amount - (shopper.amount * .12)}`);
         } else {
             console.log(`${shopper.name}, your total is ${shopper.amount}, you did not spend enough for a discount, your total is ${shopper.amount}`);
@@ -148,8 +148,8 @@
      */
 
     books.forEach(function (book, index){
-        console.log(`Book # ${index + 1}
-         Title: ${book.title}
+        console.log(`Book # ${index + 1}\n
+         Title: ${book.title}\n
          Author: ${book.author.firstName} ${book.author.lastName}`)
     })
 
@@ -163,5 +163,18 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function makeBook (title, author){
+        let authorArray = author.split(" ")
+        let bookObject = {
+            title: title,
+            author: {
+                firstName: authorArray[0],
+                lastName: authorArray[1]
+            }
+        };
+
+        return bookObject;
+    }
 
 })();
