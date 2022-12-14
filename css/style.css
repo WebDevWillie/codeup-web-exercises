@@ -1,0 +1,24 @@
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    border: 0;*/
+/*}*/
+
+/*.fancy-header {*/
+/*    color: blue; !* single line comment *!*/
+/*    text-decoration: underline;*/
+
+
+body {
+    font-family: Serif;
+}
+
+.pics {
+    border-radius: 38px;
+    background: #e0e0e0;
+    box-shadow:  19px 19px 38px #8d8d8d,
+    -19px -19px 38px #ffffff;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+}
