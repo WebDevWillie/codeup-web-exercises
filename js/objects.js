@@ -178,7 +178,37 @@
     }
     // Create a function, findAverageDogAge, that takes in a array of pet objects with age properties and returns the average age of a dog.
 
-        const pets = [
+        // const pets = [
+    //     {
+    //         name: 'Sparky',
+    //         type: 'Fish',
+    //         age: 4
+    //     },
+    //     {
+    //         name: 'Mr. Pig',
+    //         type: 'Cat',
+    //         age: 4
+    //     },
+    //     {
+    //         name: 'Bubba',
+    //         type: 'Dog',
+    //         age: 5
+    //     },
+    //     {
+    //         name: 'Pickles',
+    //         type: 'Dog',
+    //         age: 10
+    //     }
+    //
+    // ];
+
+    function findAverageDogAge (){
+        pets.forEach(function (pet ,index){
+            console.log(pet.age);
+        })
+    }
+
+    const pets = [
         {
             name: 'Sparky',
             type: 'Fish',
@@ -195,18 +225,28 @@
             age: 5
         },
         {
-            name: 'Pickles',
+            name: 'Beans',
             type: 'Dog',
-            age: 10
+            age: 3
+        },
+        {
+            name: 'Mr. Salmon',
+            type: 'Fish',
+            age: 1
         }
-
     ];
 
-    function findAverageDogAge (){
-        pets.forEach(function (pet ,index){
-            console.log(pet.age);
-        })
+
+    function returnPetsWithNoFish (pets) {
+        for (let i = pets.length - 1; i >= 0; --i) {
+            if (pets[i].type === "Fish") {
+                pets.splice(i,1);
+                console.log(pets);
+            }
+        }
     }
+
+    returnPetsWithNoFish(pets);
 
 
 })();
