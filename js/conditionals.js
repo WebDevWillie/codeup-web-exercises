@@ -315,3 +315,32 @@ sayHowdy();
 // write a function, abbrevToDay, that takes in a three-character abbreviation for the day of the week and returns the complete day of the week
 // Example: abbrevToDay('mon') returns 'Monday'
 
+// Create a function, findAverageDogAge, that takes in a array of pet objects with age properties and returns the average age of a dog.
+
+    const pets = [
+    {
+        name: 'Sparky',
+        type: 'Fish',
+        age: 4
+    },
+    {
+        name: 'Mr. Pig',
+        type: 'Cat',
+        age: 4
+    },
+    {
+        name: 'Bubba',
+        type: 'Dog',
+        age: 5
+    },
+    {
+        name: 'Pickles',
+        type: 'Dog',
+        age: 10
+    }
+
+];
+
+
+
+
