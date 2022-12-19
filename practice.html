@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  let array = ["Chris", "Will", "Jesus", "Hilary Clinton"];
+
+  function likeText(input) {
+    if (input.length === 0) {
+      return "No one likes this yet.";
+    } else if (input.length === 1) {
+      return `${input[0]} likes this`;
+    } else if (input.length === 2) {
+      return ` ${input[0]} and ${input[1]} likes this`;
+    } else if (input.length === 3) {
+      return ` ${input[0]}, ${input[1]} and ${input[2]} likes this`;
+    } else if (input.length >= 4) {
+      return ` ${input[0]}, ${input[1]} and ${input.length - 2} others likes this`;
+    }
+  }
+
+  console.log(likeText(array));
+
+  let numbers = [1,2,3,4,5,6,7,8,9,0];
+
+  function createPhoneNumber(numbers){
+        return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`;
+  }
+
+  console.log(createPhoneNumber(numbers));
+
+</script>
+
+</body>
+</html>

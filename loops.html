@@ -6,6 +6,25 @@
 </head>
 <body>
 <h1>Loops Exercise</h1>
+<script>
+    let array = ["Chris", "Will", "Jesus"];
+
+    function likeText(input) {
+        if (input.length === 0) {
+            return "No one likes this yet.";
+        } else if (input.length === 1) {
+            return `${input[0]} likes this`;
+        } else if (input.length === 2) {
+            return ` ${input[0]} and ${input[1]} likes this`;
+        }
+    }
+
+    console.log(likeText(array));
+
+
+</script>
+
+
 <script src="js/for_loops.js"></script>
 <script src="js/break_and_continue.js"></script>
 <script src="js/while.js"></script>

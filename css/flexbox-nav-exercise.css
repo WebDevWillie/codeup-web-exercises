@@ -1,38 +1,55 @@
 * {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: sans-serif;
+    padding: 0;
     margin: 0;
-    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Slackey', cursive;
 }
 
-.container {
-    background-color: #8d8d8d;
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../images/mushroom-background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
     display: flex;
-    margin: auto;
-
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-a {
+.hero {
+    color: white;
+    font-size: 20px;
+}
+
+nav ul li {
+    list-style-type: none;
     display: inline-block;
+    padding: 10px 20px
+
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: black;
-
 }
 
-
-.list {
-    display: flex;
-    list-style: none;
-
+nav ul li a:hover {
+    color: #efc549;
+    transition: .3s;
 }
 
-.list-item {
-    padding: 20px;
-}
-
-h2 {
-    margin: auto;
+button {
+    border: none;
+    /*background: #efc549;*/
+    border-radius: 30px;
+    /*color: white;*/
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
 }
