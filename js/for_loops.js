@@ -1,4 +1,4 @@
-
+"use strict";
 // function showMultiplicationTable (input) {
 //         if (input === 0){
 //                 console.log("Anything times zero is zero");
