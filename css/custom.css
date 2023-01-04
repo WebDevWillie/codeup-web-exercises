@@ -6,4 +6,5 @@
     background-image: url("../images/pizza.png");
     height: 346px;
     background-size: cover;
+    border-radius: 8px;
 }

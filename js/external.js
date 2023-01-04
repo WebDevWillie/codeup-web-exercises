@@ -57,13 +57,27 @@ returnLastTwoChars("william");
 // iBeforeE(‘their’) // returns ‘thier’
 // iBeforeE(‘theirtheir’) // returns ‘thierthier’
 
-function iBeforeE (input) {
-    return input.replace("ei", "ie");
+// function iBeforeE (input) {
+//     return input.replace("ei", "ie");
+// }
+//
+// console.log(iBeforeE("theirtheir"));
+
+// Create a function, filterList, that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+// filterList([1,2,‘a’,‘b’]) // returns [1,2]
+// filterList([1,‘a’,‘b’,0,15]) // returns [1,0,15]
+// filterList([1,2,‘aasf’,‘1’,‘123’,123]) // returns [1,2,123]
+
+function filterList(input) {
+    let filt = input.filter(function (x){
+        if (typeof x === "number") {
+            return x
+        }
+        console.log(filt);
+    })
 }
 
-console.log(iBeforeE("theirtheir"));
-
-
+console.log(filterList([1,2,"a","b"]))
 
 
 
