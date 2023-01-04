@@ -38,17 +38,30 @@ returnLastTwoChars("william");
 // returnLastCharsReversed(‘codeup’, 3) // returns ‘pue’
 // returnLastCharsReversed(‘codeup’, 4) // returns ‘pued’
 
-function returnLastCharsReversed (input1, input2) {
-    let num = input2;
-    let chars = input1.slice(-num);
-    let split = chars.split("");
-    let reverse = split.reverse();
-    let join = reverse.join("");
-    console.log(join);
+// function returnLastCharsReversed (input1, input2) {
+//     let num = input2;
+//     let chars = input1.slice(-num);
+//     let split = chars.split("");
+//     let reverse = split.reverse();
+//     let join = reverse.join("");
+//     console.log(join);
+//
+// }
+//
+// returnLastCharsReversed("william", 3);
 
+// Write a function, iBeforeE that takes in a string and returns the string with any ‘ei’ characters replaced with ‘ie’.
+// iBeforeE(‘ei’) // returns ‘ie’
+// iBeforeE(‘height’) // returns ‘hieght’
+// iBeforeE(‘heist’) // returns ‘hiest’
+// iBeforeE(‘their’) // returns ‘thier’
+// iBeforeE(‘theirtheir’) // returns ‘thierthier’
+
+function iBeforeE (input) {
+    return input.replace("ei", "ie");
 }
 
-returnLastCharsReversed("william", 3);
+console.log(iBeforeE("theirtheir"));
 
 
 
