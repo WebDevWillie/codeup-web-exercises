@@ -68,16 +68,57 @@ returnLastTwoChars("william");
 // filterList([1,‘a’,‘b’,0,15]) // returns [1,0,15]
 // filterList([1,2,‘aasf’,‘1’,‘123’,123]) // returns [1,2,123]
 
-function filterList(input) {
-    let filt = input.filter(function (x){
-        if (typeof x === "number") {
-            return x
-        }
-        console.log(filt);
-    })
+// function filterList(input) {
+//     let filt = input.filter(function (x){
+//         if (typeof x === "number") {
+//             return x
+//         }
+//         console.log(filt);
+//     })
+// }
+//
+// console.log(filterList([1,2,"a","b"]))
+
+// Create a function, zipArrays, that takes two array inputs of the same length and returns an array with the elements of both arrays alternating in the order of first[0], second[0], first[1], second[1], etc. If both arrays are empty, return an empty array.
+//
+//
+// zipArrays([], []) // returns []
+// zipArrays([1], [2]) // returns [1, 2]
+// zipArrays(['a', 'b'], ['c', 'd']) // returns... ['a', 'c', 'b', 'd']
+// zipArrays([1,2,'a','b'], ['bob', null, 'sally', 25]) // returns...
+//
+//     [
+//     1,
+//         'bob',
+//         2,
+//         null,
+//         'a',
+//         'sally',
+//         'b',
+//         25
+//     ]
+// white_check_mark
+// +1
+// raised_hands
+function zipArrays(first, second) {
+    const zipped = [];
+
+    for (let i = 0; i < first.length; i++) {
+        zipped.push(first[i]);
+        zipped.push(second[i]);
+    }
+
+    return zipped;
 }
 
-console.log(filterList([1,2,"a","b"]))
+
+
+
+
+
+
+
+
 
 
 
