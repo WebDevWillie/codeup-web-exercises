@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div">
+    <h1 id="h1">I am an h1</h1>
+
+    <p class="para">I am a paragraph</p>
+
+    <ul class="ul">
+        <li class="list-item">I am a list item</li>
+        <li class="list-item">I am a list item</li>
+        <li class="list-item">I am a list item</li>
+        <li class="list-item">I am a list item</li>
+    </ul>
+
+</div>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    let header = $("#h1").html();
+   $("#h1").on("click", function (){
+       alert(header);
+   })
+
+    let liColor = $("li").css("color", "red");
+    console.log(liColor);
+    let liSize = $("li").css({"font-size": "20px"});
+    console.log(liSize)
+
+
+</script>
+<script src="./js/jquery-3.6.3.js"></script>
+</body>
+</html>
