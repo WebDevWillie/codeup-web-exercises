@@ -5,40 +5,45 @@
     <title>Title</title>
 </head>
 <body>
-<div id="div">
-    <h1 id="h1" class="h1-class">I am an h1</h1>
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h1 id="h1" class="h1-class">I am an h1</h1>
 
-    <p class="para item">I am a paragraph</p>
+                <p class="para item">I am a paragraph</p>
 
-    <ul class="ul">
-        <li class="list-item">I am a list item</li>
-        <li class="list-item">I am a list item</li>
-        <li class="list-item">I am a list item</li>
-        <li class="list-item">I am a list item</li>
-    </ul>
+                <ul class="ul">
+                    <li class="list-item">I am a list item</li>
+                    <li class="list-item">I am a list item</li>
+                    <li class="list-item">I am a list item</li>
+                    <li class="list-item">I am a list item</li>
+                </ul>
 
+            </div>
+        </div>
+    </div>
 </div>
 
 
-
-
-
-
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
-    let header = $("#h1").html();
-   $("#h1").on("click", function (){
-       alert(header);
-   })
+    $("h1").click(function () {
+        $(this).css("background-color", "yellow");
+    });
 
-    let liColor = $("li").css("color", "red");
-    console.log(liColor);
-    let liSize = $("li").css({"font-size": "20px"});
-    console.log(liSize)
+    $("p").dblclick(function (){
+        $(this).css("font-size", "18px");
+    })
 
-    let h1Class = $(".h1-class").html();
-    alert(h1Class)
+    $("li").hover(function (){
+        $(this).css("color", "red");
+
+    }, function (){
+        $(this).css("color", "black");
+    });
 
 
 </script>
