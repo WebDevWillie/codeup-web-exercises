@@ -174,3 +174,34 @@
 // }
 //
 // console.log(encodeStr("apple"));
+
+// function getAverageItemPrice (input){
+//     let average = 0
+//     for (let i = 0; i < input.items.length; i++) {
+//         average += input.items[i].price;
+//     }
+//     return average / input.items.length;
+// }
+
+
+// function getAverageSpentPerItem (input){
+//     let sum = 0
+//     let totalQuantity = 0
+//     for(let i = 0; i < shoppingCart.items.length; i++){
+//         sum += (shoppingCart.items[i].quantity * shoppingCart.items[i].price)
+//         totalQuantity += input.items[i].quantity
+//     }
+//     return sum / totalQuantity;
+// }
+
+
+// function mostSpentOnItem(shoppingCart) {
+//     let mostExpensive = shoppingCart.items[0];
+//     for (let i = 1; i < shoppingCart.items.length; i++) {
+//         if (shoppingCart.items[i].price * shoppingCart.items[i].quantity >
+//             mostExpensive.price * mostExpensive.quantity) {
+//             mostExpensive = shoppingCart.items[i];
+//         }
+//     }
+//     return mostExpensive;
+// }
