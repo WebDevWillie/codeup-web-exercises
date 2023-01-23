@@ -48,41 +48,94 @@
 <!--Keys -->
 <script src="./js/keys.js"></script>
 <!--Geo Mapbox -->
-<script src="./js/mapbox-geocoder-utils.js"></script>
+<!--<script src="./js/mapbox-geocoder-utils.js"></script>-->
 <!-- Mapbox JS -->
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
 
 <!-- Custom JS -->
 <script>
 // -MAP GENERATION    -->
+
     mapboxgl.accessToken = keys.mapBox;
+
     let map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/willparry/cld82696h007901oafua0czic',
-        zoom: 2,
+        zoom: 5,
         center: [-85.797974, 30.179654]
     });
+
+let favRestaurants = [
+    {
+        location: [-85.797974, 30.179654],
+        name: "Dirty Dick's Crab Shack",
+        popUpHTML: "Welcome to Dirty Dicks!"
+    },
+    {
+        location: [-81.727866, 25.973595],
+        name: "Snook Inn",
+        popUpHTML: "Best Seafood in Marco Island!"
+    },
+    {
+        location: [-80.261391, 25.784601],
+        name: "La Rosa Fine Cuban Cuisine",
+        popUpHTML: "Bienvenidas de La Rosa!"
+    }
+]
+
+
+// favRestaurants.forEach(function (favrestaurant){
+//     new mapboxgl.Marker()
+//         .setLngLat(favrestaurant.location)
+//         .addTo(map);
+// })
+
+function postMarkers(arr){
+    arr.forEach(function (input){
+        let popup = new mapboxgl.Popup()
+            .setHTML(input.popUpHTML);
+        let marker = new mapboxgl.Marker()
+            .setLngLat(input.location)
+            .addTo(map)
+            .setPopup(popup);
+    })
+    // for(let i = 0; i < arr.length; i++) {
+    //     let popup = new mapboxgl.Popup()
+    //         .setHTML(arr[i].popUpHTML);
+    //     let marker = new mapboxgl.Marker()
+    //         .setLngLat(arr[i].location)
+    //         .addTo(map)
+    //         .setPopup(popup);
+    // }
+}
+
+postMarkers(favRestaurants);
+
+
+
+
+// 'mapbox://styles/willparry/cld82696h007901oafua0czic',
 // ---POPUP AND MARKER---->
-    let DDPopup = new mapboxgl.Popup()
-        .setHTML("<p>Welcome to D. Dicks!!</p>")
-    let marker = new mapboxgl.Marker()
-        .setLngLat([-85.797974, 30.179654])
-        .addTo(map)
-        .setPopup(DDPopup);
-
-    let SIPopup = new mapboxgl.Popup()
-    .setHTML("<p>Best seafood in Marco Island!</p>")
-    let marker2 = new mapboxgl.Marker()
-        .setLngLat([-81.727866, 25.973595])
-        .addTo(map)
-        .setPopup(SIPopup);
-
-    let LRPopup = new mapboxgl.Popup()
-    .setHTML("<p>Bienvenidas de La Rosa!</p>")
-    let marker3 = new mapboxgl.Marker()
-        .setLngLat([-80.261391, 25.784601])
-        .addTo(map)
-        .setPopup(LRPopup);
+//     let DDPopup = new mapboxgl.Popup()
+//         .setHTML("<p>Welcome to D. Dicks!!</p>")
+//     let marker = new mapboxgl.Marker()
+//         .setLngLat([-85.797974, 30.179654])
+//         .addTo(map)
+//         .setPopup(DDPopup);
+//
+//     let SIPopup = new mapboxgl.Popup()
+//     .setHTML("<p>Best seafood in Marco Island!</p>")
+//     let marker2 = new mapboxgl.Marker()
+//         .setLngLat([-81.727866, 25.973595])
+//         .addTo(map)
+//         .setPopup(SIPopup);
+//
+//     let LRPopup = new mapboxgl.Popup()
+//     .setHTML("<p>Bienvenidas de La Rosa!</p>")
+//     let marker3 = new mapboxgl.Marker()
+//         .setLngLat([-80.261391, 25.784601])
+//         .addTo(map)
+//         .setPopup(LRPopup);
 
 
     //-----ZOOM BUTTON--------
@@ -98,9 +151,9 @@
 
 // LOOP ARRAY OF RESTAURANT OBJECTS
 
-favRestaurants.forEach(function (fav){
-    map.center = fav.location;
-})
+// favRestaurants.forEach(function (fav){
+//     map.center = fav.location;
+// })
 
 
 
