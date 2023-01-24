@@ -1,0 +1,54 @@
+* {
+
+    box-sizing: border-box;
+}
+
+#myVideo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#weather-card {
+    flex-wrap: nowrap;
+    opacity: 80%;
+}
+
+#map {
+    border-radius: 12px;
+    opacity: 85%;
+    height: 250px;
+    width: 80%;
+    flex-grow: 1;
+}
+
+.card-indiv {
+    height: 410px;
+    width: 160px;
+}
+
+.map-div {
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    margin-left: 124px;
+    width: 80%;
+
+}
+
+.mapboxgl-canvas {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.mapboxgl-ctrl {
+    display: none;
+}

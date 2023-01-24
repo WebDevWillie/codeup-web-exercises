@@ -21,21 +21,30 @@
 
 <div class="page-wrapper">
 <!-- NAV Bar   -->
-        <nav class="navbar navbar-light bg-light justify-content-between">
+        <nav class="navbar navbar-dark bg-dark justify-content-between">
             <a class="navbar-brand"><h1>MapBox App</h1></a>
             <form class="form-inline d-flex">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search an address" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </nav>
     <main class="container">
-        <div class="row full-width">
+        <div class="row full-width d-flex justify-content-center">
             <aside class="column">
-            <button id="zoomBtn">Zoom</button>
+                <button type="button" class="btn btn-success my-2" id="zoomBtn">Zoom</button>
+                <div class="row d-flex justify-content-center">
+                    <img src="./images/dirty-dicks.jpeg" class="ddch my-2">
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <img src="./images/dirty-dicks.jpeg" class="ddch my-2">
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <img src="./images/dirty-dicks.jpeg" class="ddch my-2">
+                </div>
             </aside>
-            <div class="column">
+            <div class="map-div d-flex justify-content-center">
                 <!-- The HTML element that serves as the Mapbox container -->
-                <div id="map"></div>
+                <div id="map" class=""></div>
             </div>
         </div>
     </main>
@@ -84,12 +93,8 @@ let favRestaurants = [
 ]
 
 
-// favRestaurants.forEach(function (favrestaurant){
-//     new mapboxgl.Marker()
-//         .setLngLat(favrestaurant.location)
-//         .addTo(map);
-// })
-
+// 'mapbox://styles/willparry/cld82696h007901oafua0czic',
+// ---POPUP AND MARKER---->
 function postMarkers(arr){
     arr.forEach(function (input){
         let popup = new mapboxgl.Popup()
@@ -99,46 +104,13 @@ function postMarkers(arr){
             .addTo(map)
             .setPopup(popup);
     })
-    // for(let i = 0; i < arr.length; i++) {
-    //     let popup = new mapboxgl.Popup()
-    //         .setHTML(arr[i].popUpHTML);
-    //     let marker = new mapboxgl.Marker()
-    //         .setLngLat(arr[i].location)
-    //         .addTo(map)
-    //         .setPopup(popup);
-    // }
 }
 
 postMarkers(favRestaurants);
 
 
-
-
-// 'mapbox://styles/willparry/cld82696h007901oafua0czic',
-// ---POPUP AND MARKER---->
-//     let DDPopup = new mapboxgl.Popup()
-//         .setHTML("<p>Welcome to D. Dicks!!</p>")
-//     let marker = new mapboxgl.Marker()
-//         .setLngLat([-85.797974, 30.179654])
-//         .addTo(map)
-//         .setPopup(DDPopup);
-//
-//     let SIPopup = new mapboxgl.Popup()
-//     .setHTML("<p>Best seafood in Marco Island!</p>")
-//     let marker2 = new mapboxgl.Marker()
-//         .setLngLat([-81.727866, 25.973595])
-//         .addTo(map)
-//         .setPopup(SIPopup);
-//
-//     let LRPopup = new mapboxgl.Popup()
-//     .setHTML("<p>Bienvenidas de La Rosa!</p>")
-//     let marker3 = new mapboxgl.Marker()
-//         .setLngLat([-80.261391, 25.784601])
-//         .addTo(map)
-//         .setPopup(LRPopup);
-
-
     //-----ZOOM BUTTON--------
+let zoomLevel = [5, 15, 20, 25];
     let counter = 0;
     $("#zoomBtn").click(function (){
        map.setZoom(zoomLevel[counter]);

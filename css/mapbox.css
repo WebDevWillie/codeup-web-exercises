@@ -15,6 +15,7 @@ body {
 }
 /* THE PAGE WRAPPER MIMICS THE BODY, ONLY WE ARE ABLE TO DO MORE WITH IT IF NECESSARY */
 .page-wrapper {
+    background-color: #7E7A7AFF;
     display:flex;
     flex-direction: column;
     min-height: 100vh;
@@ -46,7 +47,7 @@ header.container {
     display: flex;
     width: 100%;
     max-width: 900px;
-    padding: 0 20px;
+    /*padding: 0 20px;*/
     column-gap: 20px;
 }
 /* OPTIONAL COMBO CLASS TO MAKE ROW FULL-WIDTH */
@@ -55,7 +56,7 @@ header.container {
 }
 /* OPTIONAL COMBO CLASS TO MAKE ROW COLUMNS SPACED APART */
 .row.space-between {
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 /* COLUMNS WILL, BY DEFAULT, SHARE SPACE EQUALLY HORIZONTALLY WITHIN THE ROW WITH
    THEIR SIBLINGS. CONTENT PUT INSIDE THEM WILL STACK VERTICALLY. */
@@ -68,14 +69,20 @@ header.container {
 
 aside.column {
     width: 300px;
-    flex: none;
+    /*flex: none;*/
 }
 /* OPTIONAL COMBO CLASS TO MAKE A COLUMN SHRINK INSTEAD OF GROW */
 .column.col-shrink {
     flex: 0 1 auto;
 }
 
+.ddch {
+    height: 150px;
+    width: 250px;
+}
+
 #map {
+    height: 500px;
     width: 100%;
     flex-grow: 1;
 }

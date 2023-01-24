@@ -8,9 +8,9 @@
  // *
  * EXAMPLE:
  *
- *  geocode("San Antonio", API_TOKEN_HERE).then(function(results) {
- *      // do something with results
- *  })
+   geocode("San Antonio", API_TOKEN_HERE).then(function(results) {
+       do something with results
+   })
  *
  */
 // function geocode(search, token) {
@@ -52,7 +52,7 @@
 //         });
 // }
 
-let zoomLevel = [5, 15, 20, 25];
+
 
 let favRestaurants = [
     {

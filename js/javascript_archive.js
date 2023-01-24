@@ -205,3 +205,67 @@
 //     }
 //     return mostExpensive;
 // }
+
+// let cars = [
+//     {
+//         make: "ford",
+//         model: "explorer",
+//         year: "1999"
+//     },
+//     {
+//         make: "toyota",
+//         model: "corola",
+//         year: "2010"
+//     },
+//     {
+//         make: "jeep",
+//         model: "wrangler",
+//         year: "2013"
+//     }
+//
+//
+//
+// ]
+//
+// function models (inputs){
+//     let newObj = []
+//     inputs.forEach(function (input){
+//         newObj.push(input.model);
+//     })
+//     return newObj;
+// }
+//
+// console.log(models(cars));
+
+// Make a function, reverseStrings, that takes in an array of objects and reverses the value of the 'str' properties.
+
+
+    const strs = [
+    {
+        id: 1,
+        str: 'hello'
+    },
+    {
+        id: 2,
+        str: 'world'
+    },
+    {
+        id: 3,
+        str: 'codeup'
+    },
+    {
+        id: 4,
+        str: 'x'
+    }
+]
+
+function reverseStrings(arr) {
+    arr.forEach(function(obj) {
+        if (obj.hasOwnProperty('str')) {
+            obj.str = obj.str.split('').reverse().join('');
+        }
+    });
+    return arr;
+}
+
+console.log(reverseStrings(strs));
