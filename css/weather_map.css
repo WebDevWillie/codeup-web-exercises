@@ -3,6 +3,11 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Abel', sans-serif;
+    margin: 0;
+}
+
 #myVideo {
     width: 100vw;
     height: 100vh;
