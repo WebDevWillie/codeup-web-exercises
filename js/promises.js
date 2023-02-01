@@ -1,16 +1,6 @@
-
-async function getUsers(username){
-    let response = await fetch("https://api.github.com/users/$(username)")
-    console.log(response);
-
-}
-
+const username = "WebDevWillie";
 async function lastCommitDate(username) {
-    const apiUrl = await fetch('https://api.github.com/users');
-    let userList = await apiUrl.json();
-    console.log(userList);
     const users = await fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization': `token ${keys.promises}`}})
-
     console.log(users);
     try {
         let response = users;
@@ -26,5 +16,8 @@ async function lastCommitDate(username) {
     }
 }
 
+(async ()=> {
+    let newV = await lastCommitDate(username)
+    console.log(`The last push the loser known as ${username} did was at ${newV}`);
+})();
 
-console.log(lastCommitDate('hilton-chris210'));
